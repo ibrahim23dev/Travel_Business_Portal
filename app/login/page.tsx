@@ -24,37 +24,41 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="container mx-auto py-12 max-w-md">
-      <h1 className="text-3xl font-bold mb-8 text-center">Login</h1>
-      {error && <p className="text-red-500 mb-4">{error}</p>}
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
+    <div className="bg-gray-50 min-h-screen flex items-center justify-center">
+      <div className="container mx-auto py-12 max-w-md">
+        <div className="bg-white rounded-xl shadow-lg p-8 mx-auto max-w-sm">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">Login</h1>
+          {error && <p className="text-red-500 text-center mb-6">{error}</p>}
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold shadow-md hover:shadow-lg"
+            >
+              Login
+            </button>
+          </form>
         </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
-        >
-          Login
-        </button>
-      </form>
+      </div>
     </div>
   );
 }

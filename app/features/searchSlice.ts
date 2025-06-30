@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface FlightData {
+  is_refundable: boolean;
   refsegment: string;
   holdable_status: number;
   air_logo: string;
@@ -36,6 +37,7 @@ interface PriceInfo {
 }
 
 interface Flight {
+  is_refundable: boolean;
   travel_type: string;
   resultid: string;
   salecurrencycode: string;
