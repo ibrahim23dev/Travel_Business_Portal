@@ -5,13 +5,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+git clone https://github.com/ibrahim23dev/Travel_Business_Portal.git
+#then
+cd Travel_Business_Portal
+#then
+npm install
+#then
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
